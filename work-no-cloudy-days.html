@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>No Cloudy Days case study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="No Cloudy Days: a quit-smoking app and wrist sensor co-designed with one person who was quitting. A case study by Thaks (Pippo) Jeamanukoolkit.">
+<meta property="og:image" content="images/no-cloudy-days-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="top__name" href="index.html">Thaks <span class="long">(Pippo) </span>Jeamanukoolkit</a>
+    <nav class="top__nav" aria-label="Main">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a class="opt" href="index.html#experience">Experience</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="index.html#work">Back to all work</a>
+
+  <header class="cs-head">
+    <h1 class="cs-title">No Cloudy Days</h1>
+    <p class="cs-sub">It began as a way to count cigarettes. Ten weeks of co-design turned it into a way to make an invisible recovery visible.</p>
+    <dl class="cs-facts">
+      <div><dt>My role</dt><dd>Wearable concept and sketch, V1 documentation, partner testing, research synthesis into design principles</dd></div>
+      <div><dt>Team</dt><dd>Four designers, equal contribution: Palm, Khawton, Nico and me</dd></div>
+      <div><dt>Context</dt><dd>HCDE 315, Inclusive Design &amp; Engineering, Spring 2026. One quarter, eleven milestones</dd></div>
+      <div><dt>Method</dt><dd>Participatory co-design with one research partner</dd></div>
+    </dl>
+  </header>
+
+  <figure class="cs-cover cs-cover--ncd">
+    <img src="images/no-cloudy-days-poster.jpg" alt="No Cloudy Days showcase poster: the how-might-we question, the app and wrist sensor, how co-design shaped the product, and the design principles" width="606" height="800">
+  </figure>
+  <p class="cap-out">The showcase poster, presented at the end of the quarter</p>
+
+  <section class="brief" aria-labelledby="brief-title">
+    <h2 id="brief-title">In short</h2>
+    <dl style="display:contents">
+      <div><dt>Problem</dt><dd>First-time quitters can't tell how long withdrawal will last, so a bounded process feels endless.</dd></div>
+      <div><dt>What I did</dt><dd>Designed the wrist sensor, documented V1, ran the feedback session with our partner and wrote the design principles.</dd></div>
+      <div><dt>What changed</dt><dd>The sensor moved from detecting that you smoked to warning that you may be near smoke. Forms became one-tap check-ins.</dd></div>
+      <div><dt>Result</dt><dd>A mobile app and wrist-worn sensor, taken through two prototype rounds.</dd></div>
+    </dl>
+  </section>
+
+  <div class="cs-body">
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol></ol>
+    </nav>
+
+    <article class="article">
+      <section id="start">
+        <h2>We weren't allowed to start with a solution</h2>
+        <div class="prose">
+          <p>The course was deliberate about this. Before we could design anything, we had to find a person with real experience of the problem, understand their world and let them redirect us. Only then could we propose something.</p>
+          <p>So we didn't begin by asking what features a quit-smoking app should have. We began by writing down the assumptions we were carrying, that smokers need better information and that relapse is a failure of willpower, and then went looking for someone who could take them apart.</p>
+        </div>
+      </section>
+
+      <section id="partner">
+        <h2>Our research partner, Y</h2>
+        <div class="prose">
+          <p>We recruited a graduate student, called Y throughout, who was in the middle of quitting. He had cut down from around ten cigarettes a day to two or three and was preparing to stop entirely, with the help of medication that made this attempt more manageable than his last.</p>
+          <p>In one sense he was an unusually well-equipped participant: informed, medicated and motivated. That mattered later, and I have kept it in the limitations rather than leaving it out.</p>
+          <p>The session ran about fifty minutes over video, in two halves. First a semi-structured interview about routine, withdrawal, cravings, medication, work and social life. Then we built two journey maps with him: entering recovery for the first time, and going through relapse. Each map covered the steps, what was happening, pain points, emotions and workarounds.</p>
+          <p>The journey maps stopped him inventing a product and got him reconstructing an experience.</p>
+        </div>
+        <figure class="fig" data-optional>
+          <img src="images/ncd-journey-map.jpg" alt="Journey map built with Y during the co-design session">
+          <figcaption>Journey map from the co-design session</figcaption>
+        </figure>
+      </section>
+
+      <section id="unexpected">
+        <h2>Four things we didn't expect</h2>
+        <dl class="notes">
+          <div><dt>No map of withdrawal</dt><dd>First-time quitters often have no idea what withdrawal will feel like or how long the worst of it lasts. Y had to research it himself. The problem was not missing health facts. A bounded process was being experienced as an open-ended one.</dd></div>
+          <div><dt>Knowing the risk changes nothing</dt><dd>Y had known smoking was dangerous for years. What moved him was a persistent sore throat. The risk had to be felt before it became motivating, which undercuts most public-health messaging.</dd></div>
+          <div><dt>Zero is harder than fewer</dt><dd>Cutting down and stopping are different problems. One cigarette after several clear days could restart the cycle in a way he had underestimated, which is an argument against ever framing relapse as a character flaw.</dd></div>
+          <div><dt>Cigarettes were doing other jobs</dt><dd>Smoking was a break, a way to handle stress and a reason to go outside with friends. Quitting meant losing something, not only stopping something.</dd></div>
+        </dl>
+        <blockquote class="said">
+          <q>How might we help first-time quitters locate themselves on the actual curve of withdrawal, so the worst stretch feels survivable instead of indefinite?</q>
+          <cite>The question we chose, out of three</cite>
+        </blockquote>
+        <div class="prose">
+          <p>We had found three legitimate design problems and could have chased all of them into an unfocused product. Choosing one was the harder call.</p>
+        </div>
+      </section>
+
+      <section id="prototype">
+        <h2>The first prototype, and the device I designed</h2>
+        <div class="prose">
+          <p>V1 was an app plus a wrist-worn sensor. The app had a recovery dashboard, a 4-7-8 guided breathing exercise for cravings, and a daily symptom log. My individual contribution was the physical device: a small module that clips onto a smartwatch band, watches for the arm motion associated with smoking, samples the surrounding air quality, vibrates as a reminder and talks to the app. It has a clip-lock mechanism and charges over USB-C.</p>
+          <p>The reasoning was about burden. If the system depends on self-reporting, the user has to remember to log, and logging every cigarette and craving becomes its own chore. Passive sensing let the product notice things without asking.</p>
+        </div>
+        <figure class="fig" data-optional>
+          <img src="images/ncd-device-sketch.jpg" alt="My original sketch of the clip-on wrist sensor">
+          <figcaption>My original sketch of the wrist sensor</figcaption>
+        </figure>
+        <div class="panel">
+          <div class="panel__head">
+            <h3 class="panel__title">The app, screen by screen</h3>
+          </div>
+          <ul class="screens">
+            <li><span class="s-name">Dashboard</span><div><h4>Where am I in this?</h4><p>Days into recovery, cigarettes today, lung recovery, and whether the wrist device is connected. It answers the question a first-time quitter otherwise can't.</p></div><img data-optional src="images/ncd-01-dashboard.png" alt="Dashboard screen"></li>
+            <li><span class="s-name">Breathing</span><div><h4>Four, seven, eight</h4><p>Guided breathing with the stage, round count and progress. It survived Y's objection only by changing what it was for: irritability and stress, not cravings.</p></div><img data-optional src="images/ncd-02-breathing.png" alt="Breathing exercise screen"></li>
+            <li><span class="s-name">Check-in</span><div><h4>One tap, not a form</h4><p>The daily log started as a full symptom questionnaire. Y said it would make someone feel watched, so it became a single optional tap on the symptoms that chart withdrawal.</p></div><img data-optional src="images/ncd-03-checkin.png" alt="Check-in screen"></li>
+            <li><span class="s-name">Risk support</span><div><h4>You may be near smoke</h4><p>The sensor detects a spike in particulates and offers help without claiming to know what happened. It never says "you smoked", because the hardware can't prove it.</p></div><img data-optional src="images/ncd-04-risk.png" alt="Risk support screen"></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="feedback">
+        <h2>Then I showed it to Y</h2>
+        <div class="prose">
+          <p>I ran the V1 feedback session. I walked him through the prototype, named the questions we hadn't resolved, and structured his response with five actions: remove, adapt, amplify, add and repurpose. That framing stopped the conversation becoming "do you like it" and turned every criticism into a specific change.</p>
+          <p>Two of his objections were better than anything we had come up with.</p>
+        </div>
+        <blockquote class="said">
+          <q>If it only knows you smoked after you smoked, what is it for?</q>
+          <cite>Y, on the air-quality sensor (paraphrased)</cite>
+        </blockquote>
+        <div class="prose">
+          <p>The detector was built to recognize that smoking had happened. Y pointed out that detection after the fact prevents nothing. So the sensor's purpose moved from recording an event to noticing a risky situation before it becomes one. A sudden spike in particulates more likely means someone nearby has just lit up than that the air is generally bad.</p>
+          <p>He also caught a second problem: the sensor can't reliably tell poor air from secondhand smoke from the user smoking. Rather than hide that, we let the interface admit it. The system says <em>you may be near smoke</em>, never <em>you smoked</em>. Uncertain sensing that speaks with certainty becomes false accusation, and in this product false accusation means shame.</p>
+        </div>
+        <blockquote class="said">
+          <q>You would be teaching me a new ritual. What happens on the day I can't do it?</q>
+          <cite>Y, on the breathing exercise (paraphrased)</cite>
+        </blockquote>
+        <div class="prose">
+          <p>I didn't see this one coming. We had treated guided breathing as the obvious answer to a craving. Y worried that pairing every craving with an exercise would build a dependency and leave someone less able to sit through an urge on their own. In his experience the most useful thing to know was simply that the craving would pass.</p>
+          <p>We didn't delete it. We moved it. Breathing became a response to irritability and stress, where grounding genuinely helps, rather than the required answer to wanting a cigarette.</p>
+          <p>He pushed back on the logging too. Daily forms, he said, would make someone feel watched, and they would quietly stop using the app rather than say so. The log became a one-tap optional check-in on the specific symptoms of withdrawal, which is also what makes the withdrawal curve visible.</p>
+        </div>
+        <p class="reframe"><s class="was">Catching you smoking</s><span class="became">became</span><mark class="is">protecting your progress</mark></p>
+        <div class="prose">
+          <p>That one sentence did more work than any feature decision in the project. Once the system was understood as protective rather than supervisory, most of the open questions answered themselves: what the notification should say, how often it should speak, and who decides when it speaks at all.</p>
+        </div>
+      </section>
+
+      <section id="principles">
+        <h2>Five principles, written to settle arguments</h2>
+        <div class="prose">
+          <p>I turned the feedback into principles so later decisions had something to be tested against, instead of being made on whichever feature seemed useful that week.</p>
+        </div>
+        <ul class="principles">
+          <li><b>Prevention over reaction</b><span>Intervene before a relapse where we can, rather than documenting one after it happens.</span></li>
+          <li><b>Reduce the burden</b><span>The user should never have to prove their recovery to the product. Every input has to return something.</span></li>
+          <li><b>Support without shame</b><span>No wording or interaction may make relapse feel like a moral failure.</span></li>
+          <li><b>Sense passively</b><span>The wearable notices context quietly. It doesn't demand attention to do its job.</span></li>
+          <li><b>Leave control with the user</b><span>How much intervention, how many notifications and what happens next are all the user's call.</span></li>
+        </ul>
+      </section>
+
+      <section id="v2">
+        <h2>What actually changed</h2>
+        <div class="prose">
+          <p>V2 was not a redesign. We kept the wearable, the environmental awareness, the overall structure and the progress view, and changed three things: the sensor became preventive rather than forensic, heavy forms became short optional check-ins, and the system stopped assuming that detected smoke meant the user had smoked.</p>
+          <p>Keeping most of it was the point. Iteration that throws everything away usually means the research wasn't being listened to the first time.</p>
+        </div>
+        <figure class="fig" data-optional>
+          <img src="images/ncd-v1-v2.jpg" alt="The same screen in prototype V1 and V2, side by side">
+          <figcaption>V1 and V2, side by side</figcaption>
+        </figure>
+      </section>
+
+      <section id="limits">
+        <h2>What I would not claim</h2>
+        <div class="prose">
+          <p>One research partner. The findings can't be generalized, and our partner was better informed and better supported than most people attempting this, closer to a best case than a typical one.</p>
+          <p>The air-quality sensing stayed technically speculative. We designed the interface to be honest about that, but we never proved the hardware could do what we needed.</p>
+          <p>And we spent the quarter on navigating withdrawal, so two of our three opportunities went unexplored: the period before someone decides to quit, and the clinical and medication side. The social role of smoking, arguably our richest finding, is the one the product answers least well. If I picked this up again, that is where I would start.</p>
+          <p>Designed with Palm, Khawton and Nico. With particular thanks to Y, who was generous with an experience he had no obligation to share, and who was right about the breathing exercise.</p>
+        </div>
+      </section>
+
+      <nav class="next" aria-label="More work">
+        <a href="index.html#work"><small>Back to</small>All work</a>
+        <a href="work-food-loops.html"><small>Next case study</small>Food Loops</a>
+      </nav>
+    </article>
+  </div>
+</main>
+
+<footer class="wrap foot">
+  <p>© 2026 Thaks Jeamanukoolkit · <a href="index.html#contact">Contact</a></p>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

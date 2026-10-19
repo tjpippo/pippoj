@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Food Loops case study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Food Loops: redesigning restaurant surplus around the work kitchens already do. A case study by Thaks (Pippo) Jeamanukoolkit.">
+<meta property="og:image" content="images/fl-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="top__name" href="index.html">Thaks <span class="long">(Pippo) </span>Jeamanukoolkit</a>
+    <nav class="top__nav" aria-label="Main">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a class="opt" href="index.html#experience">Experience</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <a class="back" href="index.html#work">Back to all work</a>
+
+  <header class="cs-head">
+    <h1 class="cs-title">Food Loops</h1>
+    <p class="cs-sub">From tracking food waste to preventing it, by redesigning restaurant surplus around the work kitchens already do.</p>
+    <dl class="cs-facts">
+      <div><dt>My role</dt><dd>Research synthesis, concept development, interaction design, wireframing, visual design, usability testing</dd></div>
+      <div><dt>Team</dt><dd>Four designers: Palm, Batuhan, Ming and me</dd></div>
+      <div><dt>Context</dt><dd>UW HCDE, 2026. Restaurant food waste in Seattle</dd></div>
+      <div><dt>Methods</dt><dd>Interviews, competitive analysis, concept sketching, user flows, wireframes, usability testing, Figma prototyping</dd></div>
+    </dl>
+  </header>
+
+  <figure class="cs-cover cs-cover--fl">
+    <img src="images/fl-hero.jpg" alt="Three Food Loops screens: home with this week's impact, a chat with Green Valley Food Bank, and notifications" width="1760" height="1320">
+  </figure>
+
+  <section class="brief" aria-labelledby="brief-title">
+    <h2 id="brief-title">In short</h2>
+    <dl style="display:contents">
+      <div><dt>Problem</dt><dd>Restaurants throw away good food, and staff have no time to stop and list it for donation.</dd></div>
+      <div><dt>What we learned</dt><dd>The barrier was labor, not willingness. Every extra step costs paid staff time.</dd></div>
+      <div><dt>What changed</dt><dd>We moved the product upstream: scan ingredients when deliveries arrive, so surplus is predicted before it happens.</dd></div>
+      <div><dt>Result</dt><dd>A Figma prototype tested with five users, a restaurant worker and a manager.</dd></div>
+    </dl>
+  </section>
+
+  <div class="cs-body">
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol></ol>
+    </nav>
+
+    <article class="article">
+      <section id="app">
+        <h2>The app</h2>
+        <div class="panel" style="margin-top:0">
+          <div class="panel__head">
+            <h3 class="panel__title">Food Loops, screen by screen</h3>
+            <span class="panel__hint">Plays on its own. Pick a screen to stop.</span>
+          </div>
+          <div class="reel" id="flReel">
+            <div class="phone"><div class="phone__view"></div></div>
+            <div class="reel__cap">
+              <span class="reel__step"></span>
+              <h4 class="reel__title"></h4>
+              <p class="reel__text"></p>
+              <div class="reel__ctrl" role="group" aria-label="Screens"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="obvious">
+        <h2>The obvious version of the problem</h2>
+        <div class="prose">
+          <p>Restaurants throw away food that is still good. Food banks need food. Connect the two. That was the brief we gave ourselves, and the first idea followed automatically: a platform where a restaurant lists surplus, an organization claims it, and someone arranges a pickup.</p>
+          <p>It is a reasonable idea. It is also the idea everybody has, which should have been the first clue.</p>
+        </div>
+      </section>
+
+      <section id="interviews">
+        <h2>Talking to the people who would have to use it</h2>
+        <div class="prose">
+          <p>Rather than designing for food banks, we interviewed the people whose behavior the whole system depended on: restaurant owners, managers and floor staff. We asked how food actually moves through a kitchen. Three constraints came up again and again.</p>
+        </div>
+        <dl class="notes">
+          <div><dt>Time</dt><dd>Staff are already receiving stock, prepping, serving, cleaning and closing. A donation form filled in every time something might become surplus is not a small ask. It is another closing task.</dd></div>
+          <div><dt>Labor cost</dt><dd>Wanting to reduce waste is not the constraint. Every extra action costs paid staff time, and a restaurant's margin has no room for goodwill that takes twenty minutes a night.</dd></div>
+          <div><dt>Coordination</dt><dd>Food cannot simply be posted. Someone has to establish what is available, how much, whether it is safe, when it can be collected, who wants it, and whether the handoff happened.</dd></div>
+        </dl>
+        <p class="reframe"><s class="was">A donation problem</s><span class="became">turned out to be</span><mark class="is">a workflow problem</mark></p>
+        <div class="prose">
+          <p>We had assumed restaurants needed an easier way to give food away. What they needed first was an easier way to know what was <em>about</em> to become surplus. The first framing is reactive: food goes bad, someone notices, someone lists it. The second is preventive, and it happens days earlier.</p>
+          <p>Everything after this point follows from that.</p>
+        </div>
+      </section>
+
+      <section id="concepts">
+        <h2>Three directions, and why we didn't pick just one</h2>
+        <div class="prose">
+          <p>We explored three concepts rather than committing early. Each solved a real part of the problem, and each failed somewhere specific.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__head">
+            <h3 class="panel__title">Concept exploration</h3>
+            <span class="panel__hint">Pick a concept</span>
+          </div>
+          <div class="concepts" id="conceptList"></div>
+          <dl class="concept__out" id="conceptOut" aria-live="polite"></dl>
+        </div>
+        <div class="prose">
+          <p>Concepts one and two shared a fatal dependency: both needed a member of staff to notice surplus and choose to record it. The scanner was different, because it attached itself to something that already happens. Someone handles every box that comes through the back door anyway.</p>
+          <p>So we stopped treating them as alternatives. The scanner became the entry point, and the other two became what happens downstream of it. <strong>Design around an existing behavior rather than demanding a new one</strong> is the principle I took from this project and have used on everything since.</p>
+        </div>
+        <div class="pair">
+          <figure class="fig" data-optional>
+            <img src="images/fl-concepts.jpg" alt="The three concept sketches side by side">
+            <figcaption>The three concept sketches</figcaption>
+          </figure>
+          <figure class="fig" data-optional>
+            <img src="images/fl-convergence.jpg" alt="Diagram of three concepts merging into one system">
+            <figcaption>How the three concepts merged into one system</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="path">
+        <h2>One path, eight steps</h2>
+        <div class="prose">
+          <p>Once the scanner led, the whole product could be described as one continuous route, from a delivery arriving to food leaving in someone else's hands. Every screen we designed later serves one of these eight moments.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__head">
+            <h3 class="panel__title">The golden path</h3>
+            <span class="panel__hint">Step through it. Arrow keys work.</span>
+          </div>
+          <ol class="path__rail" id="pathRail"></ol>
+          <div class="path__body">
+            <div class="path__num" id="pathNum" aria-hidden="true">01</div>
+            <div>
+              <h4 class="path__title" id="pathTitle"></h4>
+              <p class="path__text" id="pathText"></p>
+              <div class="path__nav">
+                <button class="btn" type="button" id="pathPrev">Previous step</button>
+                <button class="btn" type="button" id="pathNext">Next step</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prose">
+          <p>The screens we finished at the end of the quarter do not cover this whole path. Scanning, the inventory list and listing creation stayed as wireframes, so the prototype shows the surrounding system of discovery, alerts and coordination rather than the capture moment the concept turns on.</p>
+        </div>
+      </section>
+
+      <section id="status">
+        <h2>Status had to be readable at a glance</h2>
+        <div class="prose">
+          <p>A cook walking past a screen has about two seconds. So expiry stopped being a date to read and became a state to notice: safe, use soon, at risk. Color does the work a sentence would otherwise have to do, and the only item that offers an action is the one that needs it.</p>
+          <p>Here is that logic rebuilt so you can try it. Move the day forward and watch the kitchen's inventory age.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__head">
+            <h3 class="panel__title">Inventory, simulated</h3>
+            <span class="panel__hint">Move the day, then list what is at risk</span>
+          </div>
+          <div class="sim__ctrl">
+            <label for="simRange">Days since delivery</label>
+            <input type="range" min="0" max="8" value="0" step="1" id="simRange" class="sim__range">
+            <span class="sim__day" id="simDay">Day 0</span>
+          </div>
+          <ul class="sim__list" id="simList"></ul>
+          <dl class="sim__tally">
+            <div><dt>At risk</dt><dd id="tallyRisk">0</dd></div>
+            <div><dt>Listed for pickup</dt><dd id="tallyListed">0</dd></div>
+            <div><dt>Thrown away</dt><dd id="tallySaved">0</dd></div>
+          </dl>
+        </div>
+        <div class="prose">
+          <p>Leave the day running without listing anything and the food simply expires. That is what happens today, and nobody sees it, because waste leaves in a trash bag. Food redistributed is a number a manager can put in front of an owner, which is why the home screen leads with it.</p>
+        </div>
+      </section>
+
+      <section id="deletion">
+        <h2>The interface decision was mostly deletion</h2>
+        <div class="prose">
+          <p>The first inventory form asked for ingredient, category, weight, quantity, unit, purchase date, expiry, supplier and storage. Nine fields, at the exact moment a delivery is blocking a doorway.</p>
+          <p>Scanning replaced eight of them. And because the system already knew the item, quantity and expiry, creating a surplus listing later needed almost no input: the listing screen reuses what the scan captured. The best interaction design in this project was removing fields, not adding features.</p>
+        </div>
+        <figure class="fig" data-optional>
+          <img src="images/fl-lofi-midfi.jpg" alt="The same inventory screen in low fidelity and mid fidelity">
+          <figcaption>The inventory screen, low fidelity and mid fidelity</figcaption>
+        </figure>
+      </section>
+
+      <section id="testing">
+        <h2>Testing, in widening circles</h2>
+        <div class="prose">
+          <p>The first round was five participants aged 18 to 22. That round answered a narrow question, whether someone can navigate this, and we were careful not to let it answer a broader one. A student understanding a screen is not evidence that the screen survives a dinner service.</p>
+          <p>So we widened it: a restaurant worker, then a manager. Each round asked a different question, and the manager's changed the product's framing from a tool into an operational report.</p>
+        </div>
+        <dl class="rounds">
+          <div><dt>Five general users: can they navigate it?</dt><dd>Interaction and labeling fixed</dd></div>
+          <div><dt>A restaurant worker: does it fit the shift?</dt><dd>Scanner-first entry, fields removed</dd></div>
+          <div><dt>A manager: does it make operational sense?</dt><dd>Status hierarchy, and a tally worth reporting</dd></div>
+        </dl>
+        <div class="prose" style="margin-top:24px">
+          <p>We also studied Waste No Food, an existing redistribution platform. The useful question was not which features it had but where it starts: after surplus already exists, and dependent on the donor to describe it. That gap is the whole argument for Food Loops.</p>
+        </div>
+      </section>
+
+      <section id="visual">
+        <h2>Operational, but not grim</h2>
+        <div class="prose">
+          <p>Push the visual design toward enterprise inventory software and it becomes dense and joyless, and nobody adopts it voluntarily. Push it toward a friendly consumer app and it stops looking like something you would trust with stock control.</p>
+          <p>So the palette carries the warmth and the status system carries the urgency. They are deliberately separate: brand color never means anything operational, and status color is never decorative.</p>
+        </div>
+        <div class="panel">
+          <div class="panel__head">
+            <h3 class="panel__title">Two color systems, kept apart</h3>
+            <span class="panel__hint">Brand above, status below</span>
+          </div>
+          <div class="swatches">
+            <div class="sw"><i style="background:#FFF2E6"></i><b>Peach cream</b><span>The whole canvas</span></div>
+            <div class="sw"><i style="background:#264431"></i><b>Deep forest</b><span>Headings, body, icons</span></div>
+            <div class="sw"><i style="background:#326B2C"></i><b>Loop green</b><span>Logo, primary action</span></div>
+            <div class="sw"><i style="background:#889D73"></i><b>Sage</b><span>Message bubbles, shortcuts</span></div>
+            <div class="sw"><i style="background:#FE882B"></i><b>Carrot</b><span>Logo only, never functional</span></div>
+          </div>
+          <div class="swatches">
+            <div class="sw"><i style="background:#2F6B4F"></i><b>Safe</b><span>Five days or more</span></div>
+            <div class="sw"><i style="background:#A8862F"></i><b>Use soon</b><span>Two to four days</span></div>
+            <div class="sw"><i style="background:#9A4A31"></i><b>At risk</b><span>One day or less, action offered</span></div>
+          </div>
+        </div>
+        <figure class="fig" data-optional>
+          <img src="images/fl-finals.jpg" alt="Final Food Loops screens laid out along the golden path">
+          <figcaption>Final screens along the golden path</figcaption>
+        </figure>
+      </section>
+
+      <section id="limits">
+        <h2>What I would not claim</h2>
+        <div class="prose">
+          <p>We never tested this in a working kitchen during service, which is the only test that would really count. Our closest contact with the real context was a worker and a manager talking about their work, not doing it.</p>
+          <p>The scanner also assumes barcodes, and a lot of what arrives at a restaurant is unlabeled: a crate of produce, a delivery from a local farm. That is the largest hole in the concept, and we did not solve it.</p>
+          <p>And the system only reduces effort if scanning is faster than doing nothing. Doing nothing is very fast. That comparison is the one I would run first if this went further.</p>
+          <p>Designed with Palm, Batuhan and Ming, and with the restaurant staff who let us ask slow questions during a fast job.</p>
+        </div>
+      </section>
+
+      <nav class="next" aria-label="More work">
+        <a href="index.html#work"><small>Back to</small>All work</a>
+        <a href="work-no-cloudy-days.html"><small>Next case study</small>No Cloudy Days</a>
+      </nav>
+    </article>
+  </div>
+</main>
+
+<footer class="wrap foot">
+  <p>© 2026 Thaks Jeamanukoolkit · <a href="index.html#contact">Contact</a></p>
+</footer>
+
+<script src="assets/site.js"></script>
+<script>
+/* ── content ─────────────────────────────────────────────── */
+const SCREENS = [
+  { img:"images/fl-00-splash.jpg", label:"Launch", alt:"Food Loops splash screen with the logo and the line No Waste Just Loops",
+    title:"No waste, just loops",
+    text:"The mark holds two ideas at once, a produce crate and a delivery van, because the product is an inventory tool and a redistribution network in the same app." },
+  { img:"images/fl-01-home.jpg", label:"Home", alt:"Home screen showing this week's impact, food ready for donation and quick actions",
+    title:"What is leaving the building this week",
+    text:"Impact sits at the top: meals saved, boxes donated, progress toward a weekly goal. Below it are food ready for donation, three one-tap actions and nearby surplus." },
+  { img:"images/fl-04-notification.jpg", label:"Alerts", alt:"Notifications list with expiry warnings, a posted listing and deliveries on the way",
+    title:"The system speaks first",
+    text:"Expiry warnings, listings posted, deliveries on the way. The product notices before a person has to, which is the whole argument for tracking inventory instead of waiting for surplus to appear." },
+  { img:"images/fl-03-messages.jpg", label:"Messages", alt:"Chat with Green Valley Food Bank arranging a pickup, with quick message shortcuts",
+    title:"Logistics, collapsed into a thread",
+    text:"What, how much, when, who, and did it happen. Instead of a scheduling system, a conversation carries it, with shortcuts for the three things asked every time: pickup hours, entrance and instructions." },
+  { img:"images/fl-02-location.jpg", label:"Location", alt:"Location picker with recent and saved addresses and a Plus Code hint",
+    title:"Finding the back entrance",
+    text:"Pickups don't happen at the storefront. Recent and saved addresses do most of the work, and the Plus Code hint is there because a loading bay often has no address a map will accept." }
+];
+
+const CONCEPTS = [
+  { title:"Donation coordination", one:"List surplus, arrange pickup",
+    solves:"Answered the original question directly. A restaurant has surplus, creates a listing, an organization claims it and a pickup is arranged.",
+    but:"Every listing still starts with a member of staff noticing surplus and choosing to stop and record it. The hardest part of the job was left to the person with the least time." },
+  { title:"Surplus feed", one:"Available food near you",
+    solves:"Treated surplus as a live feed rather than paperwork: restaurant, quantity, distance and pickup window, all visible to whoever could collect it. Far better discovery.",
+    but:"It improved the receiving end of a problem that starts at the giving end. Someone at the restaurant still has to create the listing before anything appears." },
+  { title:"The scanner", one:"Capture at the back door",
+    solves:"Attached itself to something that already happens. Ingredients are scanned as they arrive, with item, quantity and expiry, so the system can predict surplus instead of discovering it.",
+    but:"It assumes a barcode. Loose produce and local suppliers break it, and that limitation never fully went away." }
+];
+
+const PATH = [
+  { k:"Receive", t:"A delivery arrives", d:"Boxes come through the back door, which already interrupts someone's shift. It is the only moment in the day when every ingredient is handled deliberately, and that is why the product hangs off it." },
+  { k:"Scan", t:"One scan, not nine fields", d:"A single barcode scan replaces the form. Item, quantity and expiry are captured in the time it takes to put the box down." },
+  { k:"Track", t:"Inventory keeps itself", d:"Stock lives in the system without anybody maintaining a spreadsheet. Nothing more is asked of staff until something needs attention." },
+  { k:"Detect", t:"The system notices first", d:"Expiry is monitored continuously, so ingredients near their limit surface on their own instead of being found behind something else." },
+  { k:"Act", t:"Use it, or let it go", d:"An at-risk item offers two paths: put it on tonight's menu, or mark it as surplus. Both are one tap, and using it is listed first on purpose." },
+  { k:"List", t:"The listing writes itself", d:"Because the scan already captured item, quantity and expiry, creating a listing means confirming a pickup window. The form from the first concept no longer exists." },
+  { k:"Request", t:"Someone claims it", d:"A food organization requests the item. Staff see who, what and when, the facts needed to act, and nothing else." },
+  { k:"Pickup", t:"Confirmed and closed", d:"The handoff is confirmed, the loop closes and the food is counted. That count is what a manager takes to an owner." }
+];
+
+const STOCK = [
+  { name:"Spinach",    qty:8,  unit:"packs",  life:3 },
+  { name:"Sourdough",  qty:18, unit:"loaves", life:2 },
+  { name:"Tomatoes",   qty:12, unit:"kg",     life:5 },
+  { name:"Lettuce",    qty:9,  unit:"heads",  life:1 },
+  { name:"Carrots",    qty:14, unit:"kg",     life:8 },
+  { name:"Mozzarella", qty:6,  unit:"blocks", life:4 }
+];
+
+/* ── behavior ────────────────────────────────────────────── */
+const $ = s => document.querySelector(s);
+
+phoneReel(document.getElementById("flReel"), SCREENS, 5000);
+
+/* concepts */
+const cWrap = $("#conceptList"), cOut = $("#conceptOut");
+cWrap.innerHTML = CONCEPTS.map((c, i) => `
+  <button class="concept" type="button" data-i="${i}" aria-pressed="false">
+    <b>${i + 1}. ${c.title}</b><span>${c.one}</span>
+  </button>`).join("");
+const showConcept = i => {
+  const c = CONCEPTS[i];
+  cWrap.querySelectorAll(".concept").forEach(b => b.setAttribute("aria-pressed", +b.dataset.i === i));
+  cOut.innerHTML = `<div><dt>What it solved</dt><dd>${c.solves}</dd></div>
+                    <div><dt>Where it broke</dt><dd>${c.but}</dd></div>`;
+};
+cWrap.addEventListener("click", e => { const b = e.target.closest(".concept"); if (b) showConcept(+b.dataset.i); });
+showConcept(0);
+
+/* golden path */
+const rail = $("#pathRail");
+let step = 0;
+rail.innerHTML = PATH.map((p, i) => `
+  <li><button class="path__dot" type="button" data-i="${i}"><b>${String(i + 1).padStart(2, "0")}</b>${p.k}</button></li>`).join("");
+const dots = [...rail.querySelectorAll(".path__dot")];
+const showStep = i => {
+  step = Math.max(0, Math.min(PATH.length - 1, i));
+  const p = PATH[step];
+  dots.forEach((b, n) => {
+    b.classList.toggle("done", n < step);
+    if (n === step) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+  });
+  $("#pathNum").textContent = String(step + 1).padStart(2, "0");
+  $("#pathTitle").textContent = p.t;
+  $("#pathText").textContent = p.d;
+  $("#pathPrev").disabled = step === 0;
+  $("#pathNext").disabled = step === PATH.length - 1;
+};
+rail.addEventListener("click", e => { const b = e.target.closest(".path__dot"); if (b) showStep(+b.dataset.i); });
+$("#pathPrev").addEventListener("click", () => showStep(step - 1));
+$("#pathNext").addEventListener("click", () => showStep(step + 1));
+rail.closest(".panel").addEventListener("keydown", e => {
+  if (e.key === "ArrowRight") { showStep(step + 1); e.preventDefault(); }
+  if (e.key === "ArrowLeft")  { showStep(step - 1); e.preventDefault(); }
+});
+showStep(0);
+
+/* inventory simulator */
+const listed = new Set();
+const simList = $("#simList"), simRange = $("#simRange");
+const statusOf = left =>
+  left <= 1 ? { cls:"is-risk", label:"At risk" } :
+  left <= 4 ? { cls:"is-soon", label:"Use soon" } :
+              { cls:"is-safe", label:"Safe" };
+
+function renderSim() {
+  const day = +simRange.value;
+  $("#simDay").textContent = "Day " + day;
+  let risk = 0, wasted = 0;
+  simList.innerHTML = STOCK.map((it, i) => {
+    const left = it.life - day;
+    const isListed = listed.has(i);
+    const gone = left < 0 && !isListed;
+    const s = gone ? { cls:"is-gone", label:"Expired" } : statusOf(left);
+    if (left >= 0 && left <= 1 && !isListed) risk++;
+    if (gone) wasted++;
+    const when = left < 0 ? "past expiry" : left === 0 ? "expires today" : left + (left === 1 ? " day left" : " days left");
+    return `
+      <li class="sim__item">
+        <div><span class="sim__name">${it.name}</span><span class="sim__qty">${it.qty} ${it.unit}, ${when}</span></div>
+        <span class="pill ${isListed ? "is-listed" : s.cls}">${isListed ? "Listed" : s.label}</span>
+        ${isListed ? `<span class="muted">Awaiting pickup</span>`
+          : gone ? `<span class="muted">Too late to list</span>`
+          : left <= 1 ? `<button class="btn sim__act" type="button" data-i="${i}">List as surplus</button>`
+          : `<span class="muted">No action needed</span>`}
+      </li>`;
+  }).join("");
+  $("#tallyRisk").textContent = risk;
+  $("#tallyListed").textContent = listed.size;
+  $("#tallySaved").textContent = wasted;
+}
+simRange.addEventListener("input", renderSim);
+simList.addEventListener("click", e => {
+  const b = e.target.closest(".sim__act[data-i]");
+  if (b) { listed.add(+b.dataset.i); renderSim(); }
+});
+renderSim();
+</script>
+</body>
+</html>
